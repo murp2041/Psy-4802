@@ -1,0 +1,178 @@
+---
+title: "PSY 4802- Pretest Fall 2026"
+author: "Tianna Murphy"
+date: "2026-09-15"
+output: html_document
+---
+
+# PSY 4802 Pretest
+
+The goal of this assignment is to help me understand our collective R programming knowledge. It is graded on attempt, not accuracy. Because of this, please answer honestly and skip any questions you are unsure of how to answer. If you have an idea of how to solve the problem, please write your thought process. I'll use everyone's answers to determine pacing of the course.
+
+## Questions
+
+1.  Evaluate the following expressions:
+
+<!-- -->
+
+a)  4 minus 3 times 2
+
+```{r}
+4 - 3 * 2
+```
+
+b)  the square root of 125 divided by five squared
+
+```{r}
+sqrt(125)/5^2
+```
+
+c)  find the sum of 7 and 6 and multiply by 13
+
+```{r}
+(7+6)*13
+#not sure if the question was asking about finding the sum first or not
+```
+
+2)  create variables that contain the following information:
+
+<!-- -->
+
+a)  a variable containing your favorite number
+
+```{r}
+favnum = 6
+```
+
+b)  a list containing your top three favorite foods
+
+```{r}
+favfoods = "pizza, pasta, and avocado sandwhiches"
+favfoods
+
+```
+
+c)  a vector with the numbers between 17 and 350
+
+```{r}
+
+```
+
+d)  a vector with odd numbers between 67 and 137
+
+```{r}
+
+```
+
+e)  a list with the words "I can do this" and "I can't do this" alternating six times
+
+```{r}
+
+```
+
+3)  Evaluate the following logical statements
+
+<!-- -->
+
+a)  3 times 4 is not equal to 6 plus 7
+
+```{r}
+ 
+```
+
+b)  4 squared is greater than 3 and 5 is less than 9
+
+```{r}
+
+```
+
+c)  12 divided by 2 is less than 5 or 4 is greater than 3
+
+```{r}
+
+```
+
+4)  import the world happiness survey 2025 data (see assignment in R)
+
+```{r}
+whr = read.csv("C:/Users/murph/Downloads/worldhappinessreport2025.csv")
+
+```
+
+5)  print the column names in the dataset
+
+```{r}
+print(whr)
+```
+
+6)  summarize the generosity column
+
+```{r}
+summary(whr$generosity)
+```
+
+7)  find the average perceived corruption value
+
+```{r}
+mean(whr$perceptionsofCorruption) 
+```
+
+8)  Open the mtcars dataset
+
+```{r}
+summary(mtcars)
+
+```
+
+9)  describe the data in the mtcars dataset
+
+**your text here**
+
+10) What kind of variable is present in the am column? How do you know?
+
+**your text here**
+
+11) how many values are in the dataset?
+
+**your text here**
+
+12) create a scatterplot of mpg vs hp
+
+```{r}
+plot(mtcars$mpg, mtcars$hp)
+```
+
+13) Add a regression line to your graph in 12
+
+```{r}
+plot(mtcars$mpg, mtcars$hp)
+
+```
+
+14) create a bar graph of the gear column
+
+```{r}
+
+```
+
+15) open the chickweight dataset
+
+```{r}
+
+```
+
+16) What format is the chickweight dataset in?
+
+**your text here**
+
+17) create a subset of data for Chick 4
+
+```{r}
+
+```
+
+18) change the chickweight dataset from long to wide
+
+```{r}
+
+```
