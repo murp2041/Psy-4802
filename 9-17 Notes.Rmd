@@ -478,7 +478,7 @@ following:`subset(dataframe, condition)`
 ```{r}
 subset(mtcars, mtcars$cyl==6)
 library(tidyverse)
-mtcars %>% filter(cyl==6)
+mtcars %>% filter(cyl==6) 
 ```
 
 ## Practice:
@@ -486,11 +486,23 @@ mtcars %>% filter(cyl==6)
 1.  create a subset of data from mtcars that contains all cars with less
     than 25 mpg.
 
+    ```{r}
+    subset(mtcars, mtcars$mpg<25)
+    ```
+
 2.  create a subset of data with all cars that have an automatic
     transmission
 
+    ```{r}
+    subset(mtcars, mtcars$am==0)
+    ```
+
 3.  create a subset of data with all cars that have at least 100
     horsepower and 4 gears.
+
+    ```{r}
+    subset(mtcars, mtcars$hp>=100 & mtcars$gear>=4 ) 
+    ```
 
 **A Note on Pipes (more advanced)** If not, we're going to talk about
 another way to get a subset of data from our dataframe.
@@ -518,24 +530,44 @@ We can use filter and select to subset data with pipes.
 We can use `filter()` to pick a subset of rows:
 
 ```{r}
-
+fourth_gear<- mtcars |> filter(gear==4)
 ```
 
 We can use `select()` to pick a subset of columns:
 
 ```{r}
+fourth_gear |> select(mpg,hp,am)
+```
 
+```{r}
+fourth_gear2<- mtcars |> filter(gear==4) |> select(mpg)
 ```
 
 #### Learning Outcome 4 Practice:
 
 1.  Load the ChickWeight dataset.
 
+    ```{r}
+    data(ChickWeight)
+    ```
+
 2.  Create a subset of data that contains information for Chick 8
+
+    ```{r}
+    chick8<-subset(ChickWeight, ChickWeight$Chick==8)
+    ```
 
 3.  Create a subset of data for Diet 2 only.
 
+    ```{r}
+    diet2<-subset(ChickWeight, ChickWeight$Diet==2)
+    ```
+
 4.  Create a subset of data for all chicks weighing less than 100 gm.
+
+    ```{r}
+    less100<-subset(ChickWeight, ChickWeight$weight < 100)
+    ```
 
 ### Learning Outcome 5: Describe your data effectively
 
@@ -549,7 +581,8 @@ of our data. they both use a similar format
 install ggplot if you haven't already!)
 
 ```{r}
-
+head(ChickWeight, 1)
+tail(ChickWeight, 1)
 ```
 
 hypothetically, we have a dataset with 1000 rows. can we just get rows
@@ -562,7 +595,7 @@ appropriately/is what we expect.
 `summary()`.
 
 ```{r}
-
+summary(ChickWeight)
 ```
 
 What do you notice about the summaries?
@@ -619,5 +652,3 @@ We can get the standard deviation using `sd()`.
 4.  What is the variance of the 1st chick's weight?
 
 5.  What is the range in weight for each chick posted in the dataset?
-
-test
