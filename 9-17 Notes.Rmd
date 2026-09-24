@@ -614,41 +614,65 @@ If we need the \# of observations, we can use `length()` or `nrow()` to
 get this information.
 
 ```{r}
-
+length(ChickWeight$Diet) #Only use on vectors
+nrow(ChickWeight)
 ```
 
 We can also take the average by using the function `mean()`.
 
 ```{r}
-
+mean(ChickWeight$weight)
 ```
 
 We can get the standard deviation using `sd()`.
 
 ```{r}
-
+sd(ChickWeight$weight)
 ```
 
 `var()`gives us the variance
 
 ```{r}
-
+var(ChickWeight$weight)
 ```
 
 `range()` gives us the range
 
 ```{r}
-
+chick_range<-range(ChickWeight$weight)
+chick_range[2]-chick_range[1]
 ```
 
 ###Learning Outcome 5 Practice
 
 1.  Summarize the ChickWeight dataset
 
+    ```{r}
+    summary(ChickWeight)
+    ```
+
 2.  Find the mean of the weight column
+
+    ```{r}
+    mean(ChickWeight$weight)
+    ```
 
 3.  Summarize the data for just the 1st chick
 
+    ```{r}
+    Chick1<- subset(ChickWeight, ChickWeight$Chick==1)
+    summary(Chick1)
+    ```
+
 4.  What is the variance of the 1st chick's weight?
 
+    ```{r}
+    var(Chick1$weight)
+    ```
+
 5.  What is the range in weight for each chick posted in the dataset?
+
+    ```{r}
+    range(ChickWeight$Chick)
+    range(3,3)
+    ```
