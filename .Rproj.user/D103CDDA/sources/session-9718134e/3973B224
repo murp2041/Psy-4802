@@ -1,14 +1,14 @@
 {
-    "id": "82FA5022",
-    "path": "~/Psy 4802 Notes 2/9-17 Notes.Rmd",
-    "project_path": null,
+    "id": "3973B224",
+    "path": "C:/Users/murph/OneDrive/Desktop/psy4802/Notes Part 1.Rmd",
+    "project_path": "Notes Part 1.Rmd",
     "type": "r_markdown",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1790281238819.0,
+    "created": 1790282273310.0,
     "source_on_save": false,
-    "relative_order": 2,
+    "relative_order": 1,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
@@ -16,14 +16,14 @@
         "rmdVisualWrapConfigured": "true",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "rmdVisualModeLocation": "2:0"
+        "rmdVisualModeLocation": "9532:7427.33349609375"
     },
     "folds": "",
-    "lastKnownWriteTime": 1790264858,
+    "lastKnownWriteTime": 1790265182,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1790264858,
+    "last_content_update": 1790282322826,
     "read_only": false,
     "read_only_alternatives": []
 }

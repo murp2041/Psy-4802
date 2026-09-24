@@ -1,0 +1,1 @@
+"0","    data_frame<-cbind.data.frame(participants, score, condition)"

@@ -1,0 +1,2 @@
+"0","    ideal_diamond<-subset(diamonds, diamonds$carat > 1 & diamonds$cut == ""Ideal"")"
+"0","                          "
