@@ -257,11 +257,14 @@ my_fav("pizza")
 We can make functions with more than one argument. For instance we could multiply all of the numbers in our original vector by a second vector 10-1
 
 ```{r}
-
+mult_by<- function(arg1, arg2){arg1*arg2}
 ```
 
 ```{r}
-
+num_dat$reverse <- 10:1
+num_dat$reverse
+product<-mult_by(num_dat$number, num_dat$reverse)
+product
 ```
 
 ### Learning Outcome 3 Practice
@@ -269,25 +272,29 @@ We can make functions with more than one argument. For instance we could multipl
 1.  Make a function that divides numbers by 100.
 
 ```{r}
-
+div_100<-function(number)
+  {number/100}
+div_100(100)
 ```
 
 2.  Test your function on the mtcars mpg column.
 
 ```{r}
-
+div_100(mtcars$mpg)
 ```
 
 3.  Make a function that finds the mean of a column and divides it by the standard deviation of another column.
 
 ```{r}
+col_mean<- function(column1, column2)
+{mean(column1)/sd(column2)}
 
 ```
 
 4.  Test it on the mpg column and hp column.
 
 ```{r}
-
+col_mean(mtcars$mpg, mtcars$hp)
 ```
 
 ## Learning Outcome 4: Create your own for loop
@@ -299,12 +306,16 @@ Let's say we wanted to create a column in the chickweight dataset that indicated
 We'd have to make a new column
 
 ```{r}
-
+ChickWeight 
 ```
 
 and then fill in that new column by indexing the days column, which has 12 different days.
 
 ```{r}
+ChickWeight$chick_weight_range<-NA
+ChickWeight$chick_weight_range[ChickWeight$Chick==1]<- 
+  range(ChickWeight$weight[ChickWeight$Chick==1])[2]-range(ChickWeight$weight[ChickWeight$Chick==1])[1]
+ChickWeight$chick_weight_range
 
 ```
 
@@ -319,7 +330,10 @@ to make our for loop closer to code:
 for(i in 1:nrow(ChickWeight)){ think we want to do }
 
 ```{r}
-
+for(i in 1:length(levels(ChickWeight$Chick)))
+  {ChickWeight$chick_weight_range[ChickWeight$Chick[i]]<- 
+  range(ChickWeight$weight[ChickWeight$Chick[i]])[2]
+  -range(ChickWeight$weight[ChickWeight$Chick[i]])[1]}
 ```
 
 ### Practice for Learning Outcome 4:
@@ -328,12 +342,19 @@ for(i in 1:nrow(ChickWeight)){ think we want to do }
 
 ```{r}
 
+for(num_for in 1:nrow(num_dat))
+  {print(num_for*4)}
+num_dat$times_four<-NA
+for(num_for in 1:nrow(num_dat))
+  {num_dat$times_four[num_for]<-num_dat$reverse[num_for]*4}
 ```
 
 2.  Create a new column in the mtcars data set that indicated whether a car has good mileage (over 25 mpg) or bad mileage (25 mpg or fewer).\
 
 ```{r}
-
+mtcars$good_mile<-NA
+for(i in nrow(mtcars))
+{mtcars$good_mile[mtcars$ == i]= (mtcars$mpg[i] > 25)}
 ```
 
 ## Learning Outcome 5: Create your own if statements and ifelse statments

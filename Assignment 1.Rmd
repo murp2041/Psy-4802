@@ -13,6 +13,7 @@ For your first R Assignment, complete the questions below. Remember, weekly assi
 
     ```{r}
     score<-seq(1, 100, 9)
+    score
     ```
 
 2.  Create a list called participants that contains the participants 1 - 12.
@@ -45,7 +46,6 @@ For your first R Assignment, complete the questions below. Remember, weekly assi
 6.  Open the penguins dataframe. Print the dataframe.
 
     ```{r}
-    install.packages("palmerpenguins")
     library(palmerpenguins)
     penguins
     ```
@@ -66,9 +66,8 @@ For your first R Assignment, complete the questions below. Remember, weekly assi
 9.  Create a dataframe that contains penguins with a bill length greater than or equal to the average bill length.
 
     ```{r}
-    bill_length<- subset(penguins, penguins$bill_length_mm >= 43.92)
     summary(penguins)
-    #bill_length_mm = 43.92 from penguins summary
+    bill_length<- subset(penguins, penguins$bill_length_mm >= 43.92)
     ```
 
 10. How many penguins are in this subset?

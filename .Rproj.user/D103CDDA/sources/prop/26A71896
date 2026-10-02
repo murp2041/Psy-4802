@@ -2,12 +2,13 @@
     "tempName": "Untitled1",
     "source_window_id": "",
     "Source": "Source",
-    "cursorPosition": "244,0",
+    "cursorPosition": "353,0",
     "scrollLine": "0",
     "rmdVisualMode": "true",
     "rmdVisualWrapConfigured": "true",
     "docOutlineVisible": "1",
     "rmdVisualCollapsedChunks": "",
-    "rmdVisualModeLocation": "6536:6204",
-    "last_setup_crc32": ""
+    "rmdVisualModeLocation": "9252:12822.6669921875",
+    "last_setup_crc32": "",
+    "useRainbowParens": "true"
 }
